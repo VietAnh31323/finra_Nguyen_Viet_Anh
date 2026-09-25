@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { getAssetUrl } from "@/utils/asset";
-import styles from "./FinraHeader.module.css";
 
 export default function FinraHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,50 +27,51 @@ export default function FinraHeader() {
 
   return (
     <>
-      <nav className={`${styles.headerNav} ${isScrolled ? styles.scrolled : ""}`}>
-        <div className={styles.headerContainer}>
-          <Link href="/" className={styles.brand} aria-label="Finra Capital Homepage">
+      <nav className={`finra-header-nav ${isScrolled ? "is-scrolled" : ""}`}>
+        <div className="finra-header-container">
+          <Link href="/" className="header-brand" aria-label="Finra Capital">
             <img
               src={getAssetUrl("/resource1/home1_creativeAgency/assets/img/logo.svg")}
-              alt="Finra Capital Logo"
-              className={styles.logo}
+              alt="Finra Logo"
+              className="header-logo-img"
+              loading="eager"
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className={styles.menuDesktop}>
-            <ul className={styles.navList}>
-              <li>
-                <Link href="/" className={`${styles.navLink} ${styles.active}`}>
+          {/* Desktop Navigation - Centered, no underline */}
+          <div className="header-menu-desktop">
+            <ul className="header-nav-list">
+              <li className="nav-item">
+                <Link href="/" className="nav-link">
                   Về chúng tôi
                 </Link>
               </li>
-              <li>
+              <li className="nav-item">
                 <a
                   href="https://finra.com.vn/tin-tuc"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.navLink}
+                  className="nav-link"
                 >
                   Tin tức
                 </a>
               </li>
-              <li>
+              <li className="nav-item">
                 <a
                   href="https://finra.com.vn/tuyen-dung"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.navLink}
+                  className="nav-link"
                 >
                   Tuyển dụng
                 </a>
               </li>
-              <li>
+              <li className="nav-item">
                 <a
                   href="https://finra.com.vn/hdsd"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.navLink}
+                  className="nav-link"
                 >
                   Hướng dẫn sử dụng
                 </a>
@@ -79,21 +79,38 @@ export default function FinraHeader() {
             </ul>
           </div>
 
-          {/* Header Action Button & Mobile Toggler */}
-          <div className={styles.headerActions}>
+          {/* Action button & Mobile toggle button */}
+          <div className="header-actions">
+            <div className="header-cta">
+              <button
+                className="btn-invest-now"
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/vn/app/finrainvest/id6738405146?l=vi",
+                    "_blank"
+                  )
+                }
+              >
+                Đầu tư ngay
+              </button>
+            </div>
             <button
-              className={styles.btnInvest}
-              onClick={() => window.open("https://apps.apple.com/vn/app/finrainvest/id6738405146?l=vi", "_blank")}
-            >
-              Đầu tư ngay
-            </button>
-            <button
-              className={styles.toggler}
+              className="header-toggler"
               type="button"
-              aria-label="Mở menu"
               onClick={() => setIsMenuOpen(true)}
+              aria-label="Mở menu"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -105,67 +122,68 @@ export default function FinraHeader() {
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
-        <div className={styles.mobileOverlay} onClick={() => setIsMenuOpen(false)} />
+        <div className="header-menu-mobile-full">
+          <div className="mobile-menu-header">
+            <img
+              src={getAssetUrl("/resource1/home1_creativeAgency/assets/img/logo.svg")}
+              alt="Finra Logo"
+              className="header-logo-img"
+            />
+            <button
+              className="mobile-menu-close"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Đóng menu"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <div className="mobile-menu-body">
+            <ul className="header-nav-list-mobile">
+              <li>
+                <Link href="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+                  Về chúng tôi
+                </Link>
+              </li>
+              <li>
+                <a href="https://finra.com.vn/tin-tuc" target="_blank" rel="noopener noreferrer" className="nav-link">
+                  Tin tức
+                </a>
+              </li>
+              <li>
+                <a href="https://finra.com.vn/tuyen-dung" target="_blank" rel="noopener noreferrer" className="nav-link">
+                  Tuyển dụng
+                </a>
+              </li>
+              <li>
+                <a href="https://finra.com.vn/hdsd" target="_blank" rel="noopener noreferrer" className="nav-link">
+                  Hướng dẫn sử dụng
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mobile-menu-footer">
+            <button
+              className="btn-invest-mobile"
+              onClick={() =>
+                window.open(
+                  "https://apps.apple.com/vn/app/finrainvest/id6738405146?l=vi",
+                  "_blank"
+                )
+              }
+            >
+              Đầu tư ngay
+            </button>
+            <a href="tel:19005082" className="btn-hotline">
+              Hotline: 1900 5082
+            </a>
+          </div>
+        </div>
       )}
-      <div className={`${styles.mobileDrawer} ${isMenuOpen ? styles.open : ""}`}>
-        <div className={styles.drawerHeader}>
-          <img
-            src={getAssetUrl("/resource1/home1_creativeAgency/assets/img/logo.svg")}
-            alt="Finra Logo"
-            style={{ height: 36, width: "auto" }}
-          />
-          <button
-            className={styles.closeBtn}
-            onClick={() => setIsMenuOpen(false)}
-            aria-label="Đóng menu"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-
-        <div className={styles.drawerBody}>
-          <ul className={styles.mobileNavList}>
-            <li>
-              <Link href="/" className={`${styles.mobileNavLink} ${styles.active}`} onClick={() => setIsMenuOpen(false)}>
-                Về chúng tôi
-              </Link>
-            </li>
-            <li>
-              <a href="https://finra.com.vn/tin-tuc" target="_blank" rel="noopener noreferrer" className={styles.mobileNavLink}>
-                Tin tức
-              </a>
-            </li>
-            <li>
-              <a href="https://finra.com.vn/tuyen-dung" target="_blank" rel="noopener noreferrer" className={styles.mobileNavLink}>
-                Tuyển dụng
-              </a>
-            </li>
-            <li>
-              <a href="https://finra.com.vn/hdsd" target="_blank" rel="noopener noreferrer" className={styles.mobileNavLink}>
-                Hướng dẫn sử dụng
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.drawerFooter}>
-          <button
-            className={styles.mobileBtnInvest}
-            onClick={() => {
-              setIsMenuOpen(false);
-              window.open("https://apps.apple.com/vn/app/finrainvest/id6738405146?l=vi", "_blank");
-            }}
-          >
-            Đầu tư ngay
-          </button>
-          <a href="tel:19005082" className={styles.mobileBtnHotline}>
-            Hotline: 1900 5082
-          </a>
-        </div>
-      </div>
     </>
   );
 }

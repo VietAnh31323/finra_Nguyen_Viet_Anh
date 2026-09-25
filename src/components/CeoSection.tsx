@@ -5,7 +5,7 @@ export default function CeoSection() {
   return (
     <section className="ceo-section">
       {/* Desktop Image */}
-      <div className="ceo-desktop-img d-none d-lg-block">
+      <div className="ceo-desktop-img">
         <img
           src={getAssetUrl("/resource/images/ve_chung_toi/CEO_banner.png")}
           alt="CEO Finra"
@@ -49,7 +49,7 @@ export default function CeoSection() {
       </div>
 
       {/* Mobile Image */}
-      <div className="ceo-mobile-img d-lg-none">
+      <div className="ceo-mobile-img">
         <div className="ceo-mobile-blur"></div>
         <img
           src={getAssetUrl("/resource/images/ve_chung_toi/CEO_banner_mb.png")}
