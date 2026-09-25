@@ -5,8 +5,10 @@ export default function PhilosophySection() {
   return (
     <section className="philosophy-section">
       <img
-        src={getAssetUrl("/resource/images/ve_chung_toi/ideal_banner.png")}
-        alt="Philosophy Banner"
+        src={getAssetUrl("/resource/images/ve_chung_toi/ideal_banner.webp")}
+        width={1920}
+        height={900}
+        alt=""
         className="philosophy-bg-img"
         loading="lazy"
       />
@@ -33,7 +35,7 @@ export default function PhilosophySection() {
                   <div className="philo-icon-inner bg-purple-gradient">
                     <img
                       src={getAssetUrl("/resource/images/icons/idea-01.svg")}
-                      alt="Sáng tạo"
+                      alt=""
                       className="philo-icon"
                       loading="lazy"
                     />
@@ -48,7 +50,7 @@ export default function PhilosophySection() {
               </p>
               <img
                 src={getAssetUrl("/resource/images/ve_chung_toi/waves_1.png")}
-                alt="waves-1"
+                alt=""
                 className="philo-card-deco"
                 loading="lazy"
               />
@@ -62,7 +64,7 @@ export default function PhilosophySection() {
                   <div className="philo-icon-inner bg-blue-gradient">
                     <img
                       src={getAssetUrl("/resource/images/icons/target-02.svg")}
-                      alt="Kiên định"
+                      alt=""
                       className="philo-icon"
                       loading="lazy"
                     />
@@ -77,7 +79,7 @@ export default function PhilosophySection() {
               </p>
               <img
                 src={getAssetUrl("/resource/images/ve_chung_toi/waves_2.png")}
-                alt="waves-2"
+                alt=""
                 className="philo-card-deco"
                 loading="lazy"
               />
@@ -91,7 +93,7 @@ export default function PhilosophySection() {
                   <div className="philo-icon-inner bg-purple-gradient">
                     <img
                       src={getAssetUrl("/resource/images/icons/puzzle.svg")}
-                      alt="Linh hoạt"
+                      alt=""
                       className="philo-icon"
                       loading="lazy"
                     />
@@ -106,7 +108,7 @@ export default function PhilosophySection() {
               </p>
               <img
                 src={getAssetUrl("/resource/images/ve_chung_toi/waves_3.png")}
-                alt="waves-3"
+                alt=""
                 className="philo-card-deco"
                 loading="lazy"
               />

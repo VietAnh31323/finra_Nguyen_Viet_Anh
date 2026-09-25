@@ -7,8 +7,10 @@ export default function CeoSection() {
       {/* Desktop Image */}
       <div className="ceo-desktop-img">
         <img
-          src={getAssetUrl("/resource/images/ve_chung_toi/CEO_banner.png")}
-          alt="CEO Finra"
+          src={getAssetUrl("/resource/images/ve_chung_toi/CEO_banner.webp")}
+          width={1920}
+          height={1000}
+          alt="Ông Đỗ Quang Trung - Tổng Giám Đốc Finra Capital"
           loading="eager"
         />
       </div>
@@ -21,7 +23,7 @@ export default function CeoSection() {
           </div>
           <img
             src={getAssetUrl("/resource/images/icons/quote_icon_xl.svg")}
-            alt="Quote"
+            alt=""
             className="quote-icon"
             loading="lazy"
           />
@@ -52,8 +54,10 @@ export default function CeoSection() {
       <div className="ceo-mobile-img">
         <div className="ceo-mobile-blur"></div>
         <img
-          src={getAssetUrl("/resource/images/ve_chung_toi/CEO_banner_mb.png")}
-          alt="CEO Finra"
+          src={getAssetUrl("/resource/images/ve_chung_toi/CEO_banner_mb.webp")}
+          width={780}
+          height={704}
+          alt="Ông Đỗ Quang Trung - Tổng Giám Đốc Finra Capital"
           loading="lazy"
         />
       </div>

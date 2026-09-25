@@ -6,8 +6,10 @@ export default function HeroSection() {
     <section className="hero-section">
       <div className="hero-bg">
         <img
-          src={getAssetUrl("/resource/images/ve_chung_toi/hero_banner.png")}
-          alt="Finra Hero"
+          src={getAssetUrl("/resource/images/ve_chung_toi/hero_banner.webp")}
+          width={1920}
+          height={800}
+          alt=""
           className="hero-bg-img"
           loading="eager"
         />

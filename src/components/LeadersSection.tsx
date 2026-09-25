@@ -8,6 +8,8 @@ interface Leader {
   name: string;
   role: string;
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   desc: string;
   fullBio?: string;
 }
@@ -17,7 +19,9 @@ const leaders: Leader[] = [
     id: "quang-trung",
     name: "Ông Đỗ Quang Trung",
     role: "TỔNG GIÁM ĐỐC FINRA CAPITAL",
-    image: "/resource/images/ve_chung_toi/leader_quang_trung.png",
+    image: "/resource/images/ve_chung_toi/leader_quang_trung.webp",
+    imageWidth: 333,
+    imageHeight: 420,
     desc: "16 năm kinh nghiệm làm việc trong lĩnh vực Tài chính - Ngân hàng - Bất động sản. Tham gia hoạch định chiến lược, điều hành hoạt động kinh doanh, phát triển mô hình và mạng lưới phân phối.",
     fullBio: "16 năm kinh nghiệm làm việc trong lĩnh vực Tài chính - Ngân hàng - Bất động sản. Tham gia hoạch định chiến lược, điều hành hoạt động kinh doanh, phát triển mô hình và mạng lưới phân phối. Từng giữ các chức vụ lãnh đạo quan trọng tại các tổ chức tài chính lớn, dẫn dắt các dự án đầu tư quy mô, định hình chiến lược phát triển hệ sinh thái tài chính công nghệ đột phá tại Finra Capital.",
   },
@@ -25,7 +29,9 @@ const leaders: Leader[] = [
     id: "hai-linh",
     name: "Bà Nguyễn Thị Hải Linh",
     role: "PHÓ TGĐ KINH DOANH MIỀN BẮC 2",
-    image: "/resource/images/ve_chung_toi/leader_hai_linh.png",
+    image: "/resource/images/ve_chung_toi/leader_hai_linh.webp",
+    imageWidth: 317,
+    imageHeight: 423,
     desc: "Hơn 15 năm kinh nghiệm trong lĩnh vực tài chính, ngân hàng và tư vấn đầu tư, chị Nguyễn Thị Hải Linh sở hữu nền tảng chuyên môn vững chắc cùng bề dày kinh nghiệm trong quản trị kinh doanh và phát triển đội ngũ.",
     fullBio: "Hơn 15 năm kinh nghiệm trong lĩnh vực tài chính, ngân hàng và tư vấn đầu tư, chị Nguyễn Thị Hải Linh sở hữu nền tảng chuyên môn vững chắc cùng bề dày kinh nghiệm trong quản trị kinh doanh và phát triển đội ngũ. Chị luôn tận tâm xây dựng mối quan hệ đối tác tin cậy, đồng hành cùng khách hàng trong các quyết định gia tăng giá trị tài sản bền vững.",
   },
@@ -33,7 +39,9 @@ const leaders: Leader[] = [
     id: "anh-tu",
     name: "Ông Ngô Anh Tú",
     role: "PHÓ TGĐ KINH DOANH MIỀN BẮC 3",
-    image: "/resource/images/ve_chung_toi/leader_anh_tu.png",
+    image: "/resource/images/ve_chung_toi/leader_anh_tu.webp",
+    imageWidth: 424,
+    imageHeight: 548,
     desc: "23 năm làm việc trong linh vực: Ngân hàng - Tài chính - Bảo hiểm và Bất động sản. Đảm nhiệm nhiều vị trí Quản lý quan trọng tại các Bank và TC Tài chính lớn.",
     fullBio: "23 năm làm việc trong lĩnh vực: Ngân hàng - Tài chính - Bảo hiểm và Bất động sản. Đảm nhiệm nhiều vị trí Quản lý quan trọng tại các Ngân hàng thương mại và Tổ chức Tài chính lớn tại Việt Nam. Sở hữu năng lực phân tích thị trường sắc bén, quản trị rủi ro toàn diện và chiến lược phân phối sản phẩm đầu tư chuyên sâu.",
   },
@@ -47,8 +55,10 @@ export default function LeadersSection() {
       {/* Background Decor */}
       <div className="leader-bg-wrapper">
         <img
-          src={getAssetUrl("/resource/images/ve_chung_toi/leader_decor.png")}
-          alt="Leader Decor"
+          src={getAssetUrl("/resource/images/ve_chung_toi/leader_decor.webp")}
+          width={1920}
+          height={779}
+          alt=""
           className="leader-bg-img"
           loading="lazy"
         />
@@ -69,12 +79,23 @@ export default function LeadersSection() {
             <div
               key={leader.id}
               className="leader-card group"
+              role="button"
+              tabIndex={0}
+              aria-label={`Xem thông tin ${leader.name}`}
               onClick={() => setSelectedLeader(leader)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedLeader(leader);
+                }
+              }}
             >
               <div className="leader-img-wrapper">
                 <img
                   src={getAssetUrl(leader.image)}
-                  alt={leader.name}
+                  width={leader.imageWidth}
+                  height={leader.imageHeight}
+                  alt={`${leader.name} - ${leader.role}`}
                   className="leader-img"
                   loading="lazy"
                 />
@@ -102,6 +123,9 @@ export default function LeadersSection() {
         >
           <div
             className="leader-modal-wrapper"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="leader-modal-name"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -120,7 +144,7 @@ export default function LeadersSection() {
             <div className="leader-modal-content-wrapper">
               <div className="leader-modal-left">
                 <div className="leader-modal-role">{selectedLeader.role}</div>
-                <h3 className="leader-modal-name">{selectedLeader.name}</h3>
+                <h3 id="leader-modal-name" className="leader-modal-name">{selectedLeader.name}</h3>
                 <div className="leader-modal-desc">
                   <p>{selectedLeader.fullBio || selectedLeader.desc}</p>
                 </div>
@@ -128,6 +152,8 @@ export default function LeadersSection() {
               <div className="leader-modal-right">
                 <img
                   src={getAssetUrl(selectedLeader.image)}
+                  width={selectedLeader.imageWidth}
+                  height={selectedLeader.imageHeight}
                   alt={selectedLeader.name}
                   className="leader-modal-img"
                 />

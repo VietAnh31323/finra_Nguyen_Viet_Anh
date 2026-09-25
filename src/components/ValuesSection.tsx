@@ -5,8 +5,10 @@ export default function ValuesSection() {
   return (
     <section className="values-section">
       <img
-        src={getAssetUrl("/resource/images/ve_chung_toi/core_value_banner.png")}
-        alt="Core Values Banner"
+        src={getAssetUrl("/resource/images/ve_chung_toi/core_value_banner.webp")}
+        width={1920}
+        height={919}
+        alt=""
         className="values-bg-img"
         loading="lazy"
       />
@@ -23,7 +25,7 @@ export default function ValuesSection() {
               <div className="value-row-icon bg-purple-icon">
                 <img
                   src={getAssetUrl("/resource/images/icons/security-check.svg")}
-                  alt="Minh Bạch"
+                  alt=""
                   loading="lazy"
                 />
               </div>
@@ -37,8 +39,10 @@ export default function ValuesSection() {
             </div>
             <div className="value-image-part">
               <img
-                src={getAssetUrl("/resource/images/ve_chung_toi/core_value_1.png")}
-                alt="Minh Bạch"
+                src={getAssetUrl("/resource/images/ve_chung_toi/core_value_1.webp")}
+                width={434}
+                height={250}
+                alt="Giá trị cốt lõi Minh Bạch"
                 loading="lazy"
               />
             </div>
@@ -50,7 +54,7 @@ export default function ValuesSection() {
               <div className="value-row-icon bg-blue-icon">
                 <img
                   src={getAssetUrl("/resource/images/icons/security-lock.svg")}
-                  alt="Bảo Toàn"
+                  alt=""
                   loading="lazy"
                 />
               </div>
@@ -64,8 +68,10 @@ export default function ValuesSection() {
             </div>
             <div className="value-image-part">
               <img
-                src={getAssetUrl("/resource/images/ve_chung_toi/core_value_2.png")}
-                alt="Bảo Toàn"
+                src={getAssetUrl("/resource/images/ve_chung_toi/core_value_2.webp")}
+                width={434}
+                height={250}
+                alt="Giá trị cốt lõi Bảo Toàn"
                 loading="lazy"
               />
             </div>
@@ -77,7 +83,7 @@ export default function ValuesSection() {
               <div className="value-row-icon bg-purple-icon">
                 <img
                   src={getAssetUrl("/resource/images/icons/share-07.svg")}
-                  alt="Chia Sẻ"
+                  alt=""
                   loading="lazy"
                 />
               </div>
@@ -91,8 +97,10 @@ export default function ValuesSection() {
             </div>
             <div className="value-image-part">
               <img
-                src={getAssetUrl("/resource/images/ve_chung_toi/core_value_3.png")}
-                alt="Chia Sẻ"
+                src={getAssetUrl("/resource/images/ve_chung_toi/core_value_3.webp")}
+                width={434}
+                height={250}
+                alt="Giá trị cốt lõi Chia Sẻ"
                 loading="lazy"
               />
             </div>

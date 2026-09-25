@@ -5,8 +5,10 @@ export default function VisionSection() {
   return (
     <section className="vision-section">
       <img
-        src={getAssetUrl("/resource/images/ve_chung_toi/vision_banner.png")}
-        alt="Vision Banner"
+        src={getAssetUrl("/resource/images/ve_chung_toi/vision_banner.webp")}
+        width={1920}
+        height={1081}
+        alt=""
         className="vision-bg-img"
         loading="lazy"
       />
@@ -24,14 +26,14 @@ export default function VisionSection() {
             <img
               src={getAssetUrl("/resource/images/ve_chung_toi/effect_dots.png")}
               className="vision-card-bg-img"
-              alt="dots"
+              alt=""
               loading="lazy"
             />
             <div className="vision-card-header">
               <div className="vision-card-icon">
                 <img
                   src={getAssetUrl("/resource/images/icons/vision.svg")}
-                  alt="Vision Icon"
+                  alt=""
                   loading="lazy"
                 />
               </div>
@@ -50,14 +52,14 @@ export default function VisionSection() {
             <img
               src={getAssetUrl("/resource/images/ve_chung_toi/effect_dots.png")}
               className="vision-card-bg-img"
-              alt="dots"
+              alt=""
               loading="lazy"
             />
             <div className="vision-card-header">
               <div className="vision-card-icon">
                 <img
                   src={getAssetUrl("/resource/images/icons/mission.svg")}
-                  alt="Mission Icon"
+                  alt=""
                   loading="lazy"
                 />
               </div>
@@ -71,7 +73,7 @@ export default function VisionSection() {
                 <li>
                   <img
                     src={getAssetUrl("/resource/images/icons/checkmark-circle-01.svg")}
-                    alt="Check"
+                    alt=""
                     className="vision-list-icon"
                     loading="lazy"
                   />
@@ -82,7 +84,7 @@ export default function VisionSection() {
                 <li>
                   <img
                     src={getAssetUrl("/resource/images/icons/checkmark-circle-01.svg")}
-                    alt="Check"
+                    alt=""
                     className="vision-list-icon"
                     loading="lazy"
                   />
@@ -93,7 +95,7 @@ export default function VisionSection() {
                 <li>
                   <img
                     src={getAssetUrl("/resource/images/icons/checkmark-circle-01.svg")}
-                    alt="Check"
+                    alt=""
                     className="vision-list-icon"
                     loading="lazy"
                   />

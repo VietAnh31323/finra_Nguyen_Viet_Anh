@@ -18,7 +18,7 @@ export default function EcosystemSection() {
             <div className="eco-row-label">
               <img
                 src={getAssetUrl("/resource/images/icons/building-07.svg")}
-                alt="Building"
+                alt=""
                 loading="lazy"
               />
               <span>Bất động sản</span>
@@ -48,7 +48,7 @@ export default function EcosystemSection() {
             <div className="eco-row-label">
               <img
                 src={getAssetUrl("/resource/images/icons/money-02.svg")}
-                alt="Money"
+                alt=""
                 loading="lazy"
               />
               <span>Tài chính</span>
@@ -86,7 +86,7 @@ export default function EcosystemSection() {
             <div className="eco-row-label">
               <img
                 src={getAssetUrl("/resource/images/icons/settings-01.svg")}
-                alt="Setting"
+                alt=""
                 loading="lazy"
               />
               <span>Vận hành</span>

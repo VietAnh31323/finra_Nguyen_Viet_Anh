@@ -16,7 +16,7 @@ export default function PartnersSection() {
           {/* Pristie */}
           <div className="partner-item-new">
             <img
-              src={getAssetUrl("/resource/images/doi_tac/pristie.png")}
+              src={getAssetUrl("/resource/images/doi_tac/pristie.webp")}
               alt="Pristie"
               className="partner-logo-new"
               loading="lazy"

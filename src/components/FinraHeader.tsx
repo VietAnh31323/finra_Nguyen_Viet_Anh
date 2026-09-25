@@ -32,7 +32,7 @@ export default function FinraHeader() {
           <Link href="/" className="header-brand" aria-label="Finra Capital">
             <img
               src={getAssetUrl("/resource1/home1_creativeAgency/assets/img/logo.svg")}
-              alt="Finra Logo"
+              alt="Finra Capital"
               className="header-logo-img"
               loading="eager"
             />
@@ -126,7 +126,7 @@ export default function FinraHeader() {
           <div className="mobile-menu-header">
             <img
               src={getAssetUrl("/resource1/home1_creativeAgency/assets/img/logo.svg")}
-              alt="Finra Logo"
+              alt="Finra Capital"
               className="header-logo-img"
             />
             <button

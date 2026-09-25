@@ -9,8 +9,10 @@ export default function TeamIntroSection() {
           {/* Team Image Left */}
           <div className="team-intro-left">
             <img
-              src={getAssetUrl("/resource/images/ve_chung_toi/team.png")}
-              alt="Đội ngũ Finra"
+              src={getAssetUrl("/resource/images/ve_chung_toi/team.webp")}
+              width={762}
+              height={1036}
+              alt="Đội ngũ nhân sự Finra Capital"
               className="team-intro-img"
               loading="lazy"
             />
@@ -38,7 +40,7 @@ export default function TeamIntroSection() {
                 <div className="core-value-icon">
                   <img
                     src={getAssetUrl("/resource/images/icons/shield-02.svg")}
-                    alt="Chuẩn mực"
+                    alt=""
                     loading="lazy"
                   />
                 </div>
@@ -55,7 +57,7 @@ export default function TeamIntroSection() {
                 <div className="core-value-icon">
                   <img
                     src={getAssetUrl("/resource/images/icons/fire.svg")}
-                    alt="Nhiệt huyết"
+                    alt=""
                     loading="lazy"
                   />
                 </div>
@@ -72,7 +74,7 @@ export default function TeamIntroSection() {
                 <div className="core-value-icon">
                   <img
                     src={getAssetUrl("/resource/images/icons/hourglass.svg")}
-                    alt="Kỷ luật"
+                    alt=""
                     loading="lazy"
                   />
                 </div>

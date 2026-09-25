@@ -6,8 +6,10 @@ export default function FinraFooter() {
   return (
     <footer className="finra-footer">
       <img
-        src={getAssetUrl("/resource/images/illus/footer-bg.png")}
-        alt="background wave"
+        src={getAssetUrl("/resource/images/illus/footer-bg.webp")}
+        width={1920}
+        height={1107}
+        alt=""
         className="footer-bg-wave"
         loading="lazy"
       />
@@ -19,16 +21,16 @@ export default function FinraFooter() {
               <Link href="/">
                 <img
                   src={getAssetUrl("/resource/images/illus/logo-full.svg")}
-                  alt="Finra Logo"
+                  alt="Finra Capital"
                   className="logo-img"
                   loading="lazy"
                 />
               </Link>
             </div>
-            <h6 className="company-name">
+            <p className="company-name">
               Công Ty Cổ Phần <br className="hide-on-tablet" />
               Công Nghệ Tài Chính Finra Capital
-            </h6>
+            </p>
             <div className="company-details">
               <div className="contact-item">
                 <svg
@@ -91,7 +93,7 @@ export default function FinraFooter() {
 
           {/* Links 1: Về Finra */}
           <div className="link-group">
-            <h6 className="link-title">Về Finra</h6>
+            <p className="link-title">Về Finra</p>
             <ul className="link-list">
               <li>
                 <Link href="/">Trang chủ</Link>
@@ -121,7 +123,7 @@ export default function FinraFooter() {
 
           {/* Links 2: Sản phẩm */}
           <div className="link-group">
-            <h6 className="link-title">Sản phẩm</h6>
+            <p className="link-title">Sản phẩm</p>
             <ul className="link-list">
               <li>
                 <a href="https://finra.com.vn/san-pham/finra-star" target="_blank" rel="noopener noreferrer">
@@ -149,7 +151,7 @@ export default function FinraFooter() {
           {/* Action Column: Social & Apps */}
           <div className="action-column">
             <div className="social-section">
-              <h6 className="link-title">Theo dõi chúng tôi</h6>
+              <p className="link-title">Theo dõi chúng tôi</p>
               <div className="social-icons">
                 <a
                   href="https://facebook.com"
@@ -160,7 +162,7 @@ export default function FinraFooter() {
                 >
                   <img
                     src={getAssetUrl("/resource/images/icons/facebook.svg")}
-                    alt="Facebook"
+                    alt=""
                     loading="lazy"
                   />
                 </a>
@@ -173,7 +175,7 @@ export default function FinraFooter() {
                 >
                   <img
                     src={getAssetUrl("/resource/images/icons/youtube.svg")}
-                    alt="YouTube"
+                    alt=""
                     loading="lazy"
                   />
                 </a>
@@ -186,7 +188,7 @@ export default function FinraFooter() {
                 >
                   <img
                     src={getAssetUrl("/resource/images/icons/messenger.svg")}
-                    alt="Messenger"
+                    alt=""
                     loading="lazy"
                   />
                 </a>
@@ -194,7 +196,7 @@ export default function FinraFooter() {
             </div>
 
             <div className="app-section">
-              <h6 className="link-title">Tải ứng dụng</h6>
+              <p className="link-title">Tải ứng dụng</p>
               <div className="app-buttons">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.bolt.finracapital"
@@ -205,7 +207,7 @@ export default function FinraFooter() {
                 >
                   <img
                     src={getAssetUrl("/resource/images/icons/googleplay.svg")}
-                    alt="Google Play"
+                    alt=""
                     loading="lazy"
                   />
                 </a>
@@ -218,7 +220,7 @@ export default function FinraFooter() {
                 >
                   <img
                     src={getAssetUrl("/resource/images/icons/appstore.svg")}
-                    alt="App Store"
+                    alt=""
                     loading="lazy"
                   />
                 </a>
